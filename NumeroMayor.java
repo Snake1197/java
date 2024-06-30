@@ -14,9 +14,9 @@ public class NumeroMayor {
         int numero3 = scanner.nextInt();
 
         // Determinar el mayor de los tres números usando operador ternario
-        int mayor = (numero1 >= numero2) ? 
-                    (numero1 >= numero3 ? numero1 : numero3) : 
-                    (numero2 >= numero3 ? numero2 : numero3);
+        int mayor = numero1 >= numero2 ?
+                numero1 >= numero3 ? numero1 : numero3 :
+                numero2 >= numero3 ? numero2 : numero3;
 
         System.out.println("El mayor de los tres números es: " + mayor);
 

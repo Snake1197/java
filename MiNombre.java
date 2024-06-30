@@ -3,5 +3,5 @@ public class MiNombre {
    String nombre = "Leandro";
    System.out.println("Mi nombre es " + nombre);
    }
-};
+}
 
