@@ -6,9 +6,9 @@ public class ConversionCalificaciones {
 
       System.out.println("Ingrese un valor (1 al 5) para indicar el equivalente de la calificación");
 
-      String dia = miScanner.nextLine();
+      String calificacion = miScanner.nextLine();
       // El trim() es para quitar espacios derecha e izquierda
-      switch (dia.trim()) {
+      switch (calificacion.trim()) {
          case "1" -> System.out.println("Calificación: Muy deficiente");
          case "2" -> System.out.println("Calificación: Deficiente");
          case "3" -> System.out.println("Calificación: Suficiente");
