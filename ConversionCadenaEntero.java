@@ -7,7 +7,7 @@ public class ConversionCadenaEntero {
       try {
          System.out.println("Ingrese el valor que desea convertir a un número entero");
          String valor = miScanner.nextLine();
-         int entero = Integer.parseInt(valor);
+         int entero = Integer.parseInt(valor.trim());
          System.out.println("La conversión fue realizada con éxito, el valor obtenido es: " + entero);
       } catch (NumberFormatException e) {
          System.out.println(
