@@ -22,7 +22,7 @@ public class ValidacionContrasenia {
             if (Character.isDigit(c)) {
                contieneNumero = true;
             }
-            if ("!@#$%^&*()-+".indexOf(c) >= 0) {
+            if ("!\\\"#$%&'()*+,-./:;<=>?@^_{|}~".indexOf(c) >= 0) {
                contieneCaracterEspecial = true;
             }
          }
