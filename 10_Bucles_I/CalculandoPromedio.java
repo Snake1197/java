@@ -5,7 +5,6 @@ public class CalculandoPromedio {
       for (int i = 0; i < array.length; i++) {
          array[i] = (float) (Math.random() * 100);
       }
-
       float suma = 0;
       for (float f : array) {
          suma += f;

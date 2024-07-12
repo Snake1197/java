@@ -20,7 +20,6 @@ public class ContarOcurrencias {
                   contador++;
                }
             }
-
          }
          System.out.println("El carácter ingresado aparece " + contador + " veces en la frase.");
       } catch (Exception e) {

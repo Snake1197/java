@@ -6,7 +6,6 @@ public class ConcatenandoElementos {
       for (String elemento : array) {
          resultado += elemento + " ";
       }
-
       resultado = resultado.trim();
       System.out.println("Resultado: " + resultado);
    }
