@@ -1,4 +1,3 @@
-import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -71,13 +70,19 @@ public class ManipulandoOraciones {
                   break;
                case 6:
                   String[] arrayPalabras = oracion.split("\\s+");
+                  System.out.println("Ingrese la palabra que desea buscar en la oración:");
                   String palabraABuscar = miScanner.nextLine();
-                  int count = 0;
-                  for (String palabra : arrayPalabras) {
-                     if (palabra.equals(palabraABuscar)) {
-                        count += 1;
+                  int posicion = -1;
+                  for (int i = 0; i < arrayPalabras.length; i++) {
+                     if (arrayPalabras[i].equals(palabraABuscar)) {
+                        posicion = i;
+                        break;
                      }
                   }
+                  String encontrado = posicion >= 0 ? "sí" : "no";
+                  System.out.println(
+                        "La palabra buscada '" + palabraABuscar + "' " + encontrado
+                              + " se encuenta en la oración, en la posición :" + (posicion + 1));
                   break;
                case 9:
                   System.out.println("Gracias\n\n");
@@ -92,5 +97,6 @@ public class ManipulandoOraciones {
             miScanner.nextLine();
          }
       }
+      miScanner.close();
    }
 }
