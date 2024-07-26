@@ -55,6 +55,36 @@ public class RegistroAlumnos {
                   System.out.println("Alumnos: " + Arrays.toString(alumnos));
                   System.out.println("Notas: " + Arrays.toString(notas));
                   break;
+               case 2:
+                  System.out.println("Lista de alumnos:");
+                  for (int i = 0; i < alumnos.length; i++) {
+                     System.out.println(alumnos[i] + " - Nota: " + notas[i]);
+                  }
+                  break;
+               case 3:
+                  double suma = 0;
+                  for (double n : notas) {
+                     suma += n;
+                  }
+                  double promedio = (notas.length > 0) ? suma / notas.length : 0;
+                  System.out.println("El promedio de las notas es: " + promedio);
+                  break;
+               case 4:
+                  System.out.println("Ingrese el nombre del alumno a buscar:");
+                  String nombreBuscar = miScanner.nextLine();
+                  int indexBuscar = -1;
+                  for (int i = 0; i < alumnos.length; i++) {
+                     if (alumnos[i].equals(nombreBuscar)) {
+                        indexBuscar = i;
+                        break;
+                     }
+                  }
+                  if (indexBuscar != -1) {
+                     System.out.println("Alumno: " + alumnos[indexBuscar] + " - Nota: " + notas[indexBuscar]);
+                  } else {
+                     System.out.println("El alumno no se encuentra en la lista.");
+                  }
+                  break;
                case 9:
                   System.out.println("Gracias por utilizar el servicio, vuelva pronto.");
                   sesion = false;
